@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catholic Prayer Randomizer</title>
+  <style>
+    body { font-family: sans-serif; background: #f7f3ed; color: #4a3b26; padding: 2em; }
+    #display { margin: 2em 0; font-size: 1.3em; min-height: 3em; background: #fff; border-radius: 10px; padding: 1em; box-shadow: 0 2px 8px #ccc; }
+    button { font-size: 1.1em; padding: 0.7em 2em; background: #a67c52; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #7f5a36; }
+  </style>
+</head>
+<body>
+  <h1>Catholic Prayer, Verse & Quote Randomizer</h1>
+  <div id="display">Click "New Prayer/Quote" to begin!</div>
+  <button onclick="showRandomItem()">New Prayer/Quote</button>
+
+  <script>
+    const items = [
+      "COME HOLY SPIRIT",
+      "THY WILL BE DONE.",
+      "MY GOD AND MY ALL.",
+      "Lord, I am not worthy",
+      "O HEART OF JESUS, ALL FOR THEE.",
+      "O GOD, HAVE MERCY ON ME, A SINNER.",
+      "Blessed be the Name of the Lord",
+      // ... (add all your other prayers/quotes/verses here)
+      "\"I can do all things through Christ who strengthens me.\" — Philippians 4:13",
+      "\"Pray, hope, and don't worry.\" — St. Padre Pio"
+    ];
+
+    function showRandomItem() {
+      const index = Math.floor(Math.random() * items.length);
+      document.getElementById('display').textContent = items[index];
+    }
+  </script>
+</body>
+</html>
